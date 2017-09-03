@@ -9,22 +9,30 @@ export class DataService {
     this.questions = [
       {
         text: 'What is your name?',
-        answer: 'My name is Eric',
+        answer: 'I am Genji',
         hide: true,
       },
       {
         text: 'What is your favorite color?',
-        answer: 'My favorite color is orange',
+        answer: 'My favorite color is silver',
         hide: true,
       },
       {
         text: 'What is your favorite language?',
-        answer: 'My favorite language is javascript',
+        answer: 'My favorite language is japanese, I love saying: Ryujin no ken wo kurae!',
+        hide: true,
+      },
+      {
+        text: 'What do you love?',
+        answer: 'I love Overwatch',
         hide: true,
       }
     ]
    }
    getQuestions(){
      return this.questions;
+   }
+   addQuestion(question:Question){
+     this.questions.unshift(question);
    }
 }
